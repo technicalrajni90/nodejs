@@ -1,11 +1,12 @@
-name: My First Workflow
+name: Scheduled Task
 
-on: [push]
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # Run every 5 minutes
 
 jobs:
-  print_message:
+  my-scheduled-job:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Print a Message
-      run: echo "Hello, GitHub Actions!"
+      - name: Echo message
+        run: echo "This job runs every 5 minutes!"
