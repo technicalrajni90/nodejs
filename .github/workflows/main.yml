@@ -2,7 +2,7 @@ name: Scheduled Task
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # Run every 5 minutes
+    - cron: "*/1 * * * *"  # Run every 5 minutes
 
 jobs:
   my-scheduled-job:
