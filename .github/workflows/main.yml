@@ -1,8 +1,7 @@
 name: Scheduled Task
 
 on:
-  schedule:
-    - cron: "*/1 * * * *"  # Run every 5 minutes
+  push
 
 jobs:
   my-scheduled-job:
