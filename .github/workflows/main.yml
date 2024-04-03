@@ -1,5 +1,6 @@
 name: Manual Workflow
-
+env:
+  MY_VAR: "This is a value for the entire workflow"
 on:
   workflow_dispatch:
 
@@ -8,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Message
-        run: echo "This workflow was triggered manually."
+        run: echo "Value of MY_VAR: $MY_VAR"
