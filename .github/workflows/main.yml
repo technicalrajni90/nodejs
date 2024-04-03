@@ -1,11 +1,11 @@
-name: Scheduled Task
+name: Manual Workflow
 
 on:
-  push
+  workflow_dispatch:
 
 jobs:
-  my-scheduled-job:
+  manual_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo message
-        run: echo "This job runs every 5 minutes!"
+      - name: Print Message
+        run: echo "This workflow was triggered manually."
