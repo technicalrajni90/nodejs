@@ -7,12 +7,6 @@ jobs:
   connect_to_database:
     runs-on: ubuntu-latest
 
-    environment:
-      name: staging
-
     steps:
       - name: Connect to Database
-        run: echo "Connecting to database at ${{secrets.DB_HOST}}"
-        
-      - name: Connect to Database2
-        run: echo "Connecting to database at ${{vars.GREETING}}"
+        run: echo "Connecting to database at ${{secrets.DATABASE_PASSWORD}}"
