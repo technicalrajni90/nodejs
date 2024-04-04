@@ -1,18 +1,15 @@
-name: Greeting on variable day
+name: Database Workflow
 
 on:
   workflow_dispatch
 
-env:
-  DAY_OF_WEEK: Monday
-
 jobs:
-  greeting_job:
+  connect_to_database:
     runs-on: ubuntu-latest
-    env:
-      Greeting: Hello
+
+    environment:
+      name: production
+
     steps:
-      - name: "Say Hello Mona it's Monday"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-        env:
-          First_Name: Mona
+      - name: Connect to Database
+        run: echo "Connecting to database at $DB_HOST"
