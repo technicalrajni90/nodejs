@@ -13,3 +13,6 @@ jobs:
     steps:
       - name: Connect to Database
         run: echo "Connecting to database at ${{secrets.DB_HOST}}"
+        
+      - name: Connect to Database2
+        run: echo "Connecting to database at ${{env.GREETING}}"
