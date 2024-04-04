@@ -15,4 +15,4 @@ jobs:
         run: echo "Connecting to database at ${{secrets.DB_HOST}}"
         
       - name: Connect to Database2
-        run: echo "Connecting to database at ${{env.GREETING}}"
+        run: echo "Connecting to database at ${{vars.GREETING}}"
