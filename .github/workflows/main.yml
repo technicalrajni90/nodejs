@@ -12,4 +12,4 @@ jobs:
 
     steps:
       - name: Connect to Database
-        run: echo "Connecting to database at $DB_HOST"
+        run: echo "Connecting to database at ${{secrets.DB_HOST}}"
