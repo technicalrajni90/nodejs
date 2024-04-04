@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: production
+      name: staging
 
     steps:
       - name: Connect to Database
